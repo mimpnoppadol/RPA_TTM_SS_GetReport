@@ -1,0 +1,188 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Login" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="drAgent" Type="InArgument(sd:DataRow)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>1382,3300</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>RPA_TTM_SS_GetReport.Core</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="608,3235" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: โปรแกรมสำหรับสร้างช่องทางติดต่อไปยังฐานข้อมูลโดย Dbexpress" sap:VirtualizedContainerService.HintSize="546,2970" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" IsCVEnabled="False" ScopeGuid="eea1ffbf-06f0-425b-a440-59898926a790" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,2677" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'AgentThaibev'" sap:VirtualizedContainerService.HintSize="450,158" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="eea1ffbf-06f0-425b-a440-59898926a790" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CvTextArea="67, 70, 70, 14" CvTextArgument="AgentThaibev" CvType="Text" DesignTimeRectangle="67, 69, 71, 16" DesignTimeScaleFactor="1" FriendlyName="'AgentThaibev'" FullSelectorArgument="&lt;wnd cls='TTreeView' /&gt;&lt;ctrl name='AgentThaibev' role='outline item' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TTreeView' /&gt;&lt;ctrl name='AgentThaibev' role='outline item' automationid='' check:text='AgentThaibev' /&gt;" Guid="8ee51f8a-ef18-48c6-84d0-a4eb8adb68c2" InformativeScreenshot="1f570f85f1d404673acc93b502bd148a.png" ScopeSelectorArgument="&lt;wnd app='dbxadmin.exe' cls='TfmDbxA*' title='โปรแกรมสำหรับสร้างช่องทางติดต่อไปยังฐานข้อมูลโดย Dbexpress' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" AlterIfDisabled="True" ClickType="Single" DisplayName="Click '-1'" sap:VirtualizedContainerService.HintSize="450,158" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="eea1ffbf-06f0-425b-a440-59898926a790" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="208, 53, 309, 312" DesignTimeScaleFactor="1" FriendlyName="'-1'" FullSelectorArgument="&lt;wnd cls='TValueListEditor' /&gt;&lt;ctrl role='client' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TValueListEditor' /&gt;&lt;ctrl role='client' automationid='' check:fulltext='-1' /&gt;" Guid="db2d5a66-23ee-448c-88cc-c36ebdf0a748" InformativeScreenshot="4ddfd5c5d0fcb5b06e4e438ef6facd5f.png" ScopeSelectorArgument="&lt;wnd app='dbxadmin.exe' cls='TfmDbxA*' title='โปรแกรมสำหรับสร้างช่องทางติดต่อไปยังฐานข้อมูลโดย Dbexpress' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="450,180" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(Up)][u(hk)][d(hk)][k(Up)][u(hk)][d(hk)][k(up)][u(hk)]" Version="V3" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,227" sap2010:WorkflowViewState.IdRef="NTypeInto_4" Text="klang07.thaiddns.com" Version="V3" />
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="450,197" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" Shortcuts="[d(hk)][k(Down)][u(hk)][d(hk)][k(Down)][u(hk)][d(hk)][k(Down)][u(hk)][d(hk)][k(Down)][u(hk)][d(hk)][k(down)][u(hk)]" Version="V3" />
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,1444" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DisplayName="Type Into '************'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,219" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="eea1ffbf-06f0-425b-a440-59898926a790" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="359, 243, 157, 18" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'************'" FullSelectorArgument="&lt;wnd cls='TInplaceEditList' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TInplaceEditList' /&gt;" Guid="8e950a01-4456-4cab-909b-dc2383d73457" InformativeScreenshot="fc9864c9b6951ba38f45a1e0c46c05b6.png" ScopeSelectorArgument="&lt;wnd app='dbxadmin.exe' cls='TfmDbxA*' title='โปรแกรมสำหรับสร้างช่องทางติดต่อไปยังฐานข้อมูลโดย Dbexpress' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                </uix:NTypeInto.Target>
+              </uix:NTypeInto>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '@G3NT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,219" sap2010:WorkflowViewState.IdRef="NTypeInto_9" ScopeIdentifier="eea1ffbf-06f0-425b-a440-59898926a790" Text="@g3nt" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="139, 58, 121, 21" DesignTimeScaleFactor="1" FriendlyName="'@G3NT'" FullSelectorArgument="&lt;wnd cls='TEdit' idx='2' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TEdit' check:text='@G3NT' /&gt;" Guid="04ee4d07-b1b1-4d3e-b4f0-71711c2ffd3f" ImageBase64="" InformativeScreenshot="0707da2fd42e28a5a568665a3a413d87.png" ScopeSelectorArgument="&lt;wnd app='dbxadmin.exe' cls='TfmDbxA*' title='บันทึกรหัสลับ' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                </uix:NTypeInto.Target>
+              </uix:NTypeInto>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into '@G3NT'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="388,219" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="eea1ffbf-06f0-425b-a440-59898926a790" Text="@g3nt" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="139, 84, 121, 21" DesignTimeScaleFactor="1" FriendlyName="'@G3NT'" FullSelectorArgument="&lt;wnd cls='TEdit' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TEdit' check:text='@G3NT' /&gt;" Guid="9d7a8418-d74e-4ded-8c6c-de608f20efa8" InformativeScreenshot="65fe6bba3fb05a5028bfb02fba92c00a.png" ScopeSelectorArgument="&lt;wnd app='dbxadmin.exe' cls='TfmDbxA*' title='บันทึกรหัสลับ' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                </uix:NTypeInto.Target>
+              </uix:NTypeInto>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'บันทึก'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="eea1ffbf-06f0-425b-a440-59898926a790" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="139, 130, 75, 25" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'บันทึก'" FullSelectorArgument="&lt;wnd cls='TBitBtn' title='บันทึก' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TBitBtn' title='บันทึก' check:text='บันทึก' /&gt;" Guid="f699c9b4-d685-4d85-96ef-f331119f83a1" ImageBase64="" InformativeScreenshot="48d7851349ff75d169fb120a66287503.png" ScopeSelectorArgument="&lt;wnd app='dbxadmin.exe' cls='TfmDbxA*' title='บันทึกรหัสลับ' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Right-click 'AgentThaibev'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Right" ScopeIdentifier="eea1ffbf-06f0-425b-a440-59898926a790" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="67, 70, 70, 14" CvTextArgument="AgentThaibev" CvType="Text" DesignTimeRectangle="67, 69, 71, 16" DesignTimeScaleFactor="1" FriendlyName="'AgentThaibev'" FullSelectorArgument="&lt;wnd cls='TTreeView' /&gt;&lt;ctrl name='AgentThaibev' role='outline item' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TTreeView' /&gt;&lt;ctrl name='AgentThaibev' role='outline item' automationid='' check:text='AgentThaibev' /&gt;" Guid="dc149361-8095-4960-ad5a-df1bfc98147c" InformativeScreenshot="ebeaa3e4864aab036e5c688277534647.png" ScopeSelectorArgument="&lt;wnd app='dbxadmin.exe' cls='TfmDbxA*' title='โปรแกรมสำหรับสร้างช่องทางติดต่อไปยังฐานข้อมูลโดย Dbexpress' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'บันทึก'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="eea1ffbf-06f0-425b-a440-59898926a790" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="36, 6, 30, 13" CvTextArgument="Jufin" CvType="Text" DesignTimeRectangle="3, 3, 213, 22" DesignTimeScaleFactor="1" FriendlyName="'บันทึก'" FullSelectorArgument="&lt;ctrl name='Context' role='popup menu' /&gt;&lt;ctrl automationid='16' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Context' role='popup menu' /&gt;&lt;ctrl automationid='16' role='menu item' check:text='บันทึก' /&gt;" Guid="b188d27d-4fcc-471b-8889-3c5885145687" InformativeScreenshot="7b45d12aedb1b859873b24565a2303e4.png" ScopeSelectorArgument="&lt;wnd app='dbxadmin.exe' cls='#32768' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="688, 352, 544, 375" FilePath="C:\\Program Files (x86)\\EBP\\Share\\dbxadmin.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFYSURBVFhH7ZRdjoNADIM5OkfrzXbxyEZOmpSfKQ8rrSWrkAyfDQ9d/pRer9dP5XVdS2PHR+eUA91VcDYx9wVIFd750QKuLjCbmPsCpCvwFkaH2awAOVNA4bkEMfcFyJkCI4wOs1kJVBXIJXI49sTc1wAvEa7wXADGueHtma8U2IGEBvuu8Cg0K0CqNz1rYu4LEH1ul2a5nN58v5+VB1UOYXSYzQohWbkE/GiBzhKuHynwKVD3uvYCXoKo66oCfQb5/KsFHAx38jMK3IM3Y07kNTmYkAH1UF1jrt/9C/CPasxmpCCAcgEP17V/epmoa/IQwWEV8IB8JpvI8xKwM6FvQWNOh9kVeRBHGy8COys8lyDmWDicwyGBfC/7Du4KZGaQwzgKwlxnshUiVwVwjqhaGSpzPfYCuTR3hzfX75FwSKFurndhJviRq+dbdeCuyGOqinD1r4e0LL+yhUOkaC7dTgAAAABJRU5ErkJggg==" InformativeScreenshot="a9a6b23bfdb57ea0f76e47bc3503b84e.png" Selector="&lt;wnd app='dbxadmin.exe' cls='TfmDbxA*' title='โปรแกรมสำหรับสร้างช่องทางติดต่อไปยังฐานข้อมูลโดย Dbexpress' /&gt;" Title="โปรแกรมสำหรับสร้างช่องทางติดต่อไปยังฐานข้อมูลโดย Dbexpress" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Login.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="546,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Login.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+  </Sequence>
+</Activity>
