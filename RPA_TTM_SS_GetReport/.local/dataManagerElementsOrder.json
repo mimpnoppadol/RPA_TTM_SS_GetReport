@@ -20,9 +20,18 @@
       "Path": "GetPurchase.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "dtTest&Sequence_1",
         "endDate&Sequence_2",
         "startDate&Sequence_2"
       ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "getCustomer.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
