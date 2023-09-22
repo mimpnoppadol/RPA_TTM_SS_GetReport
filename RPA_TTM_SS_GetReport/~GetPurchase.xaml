@@ -1,0 +1,375 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="GetPurchase" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1174,4927" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>RPA_TTM_SS_GetReport.Core</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>GlobalVariablesT1PNoYwrqg</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="GetPurchase" sap:VirtualizedContainerService.HintSize="592,4862" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dtTest" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: งานประจำวันซื้อขาย" sap:VirtualizedContainerService.HintSize="530,4751" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" IsCVEnabled="False" ScopeGuid="eda3122c-c4d7-453b-9360-56f97d3ac929" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,4406" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="startDate" />
+              <Variable x:TypeArguments="x:String" Name="endDate" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="434,88" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">startDate</CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">(new DateTime(DateTime.Now.Year+543,DateTime.Now.Month-1,1)).ToString("dd/MM/yyyy")</CSharpValue>
+                </InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="434,88" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">endDate</CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">(new DateTime(DateTime.Now.Year+543,DateTime.Now.Month,1).AddDays(-1)).ToString("dd/MM/yyyy")</CSharpValue>
+                </InArgument>
+              </Assign.Value>
+            </Assign>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'งานประจำวัน'" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="eda3122c-c4d7-453b-9360-56f97d3ac929" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="8, 112, 81, 30" DesignTimeScaleFactor="1" FriendlyName="'งานประจำวัน'" FullSelectorArgument="&lt;wnd cls='TPanel' title=' งานประจำวัน' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TPanel' title=' งานประจำวัน' check:text='งานประจำวัน' /&gt;" Guid="1000499b-d8ae-4ba2-846a-6376ec16bb22" InformativeScreenshot="ef1be833d29dd9fe28bb784541123a31.png" ScopeSelectorArgument="&lt;wnd app='bplusback.exe' cls='TfmTr*' title='งานประจำวันซื้อขาย' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'ซื้อขาย'" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="eda3122c-c4d7-453b-9360-56f97d3ac929" Timeout="30" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="21, 246, 40, 45" DesignTimeScaleFactor="1" ElementType="ListItem" FriendlyName="'ซื้อขาย'" FullSelectorArgument="&lt;wnd cls='TBxListView' /&gt;&lt;ctrl name='ซื้อขาย' role='list item' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TBxListView' /&gt;&lt;ctrl name='ซื้อขาย' role='list item' automationid='' check:text='ซื้อขาย' /&gt;" Guid="eb411eef-f69e-45ae-a057-83e260e6a3d5" InformativeScreenshot="6a829c4168a61b13658ade42054f81cc.png" ScopeSelectorArgument="&lt;wnd app='bplusback.exe' cls='TfmTr*' title='งานประจำวันซื้อขาย' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset X="4" />
+                  </uix:TargetAnchorable.PointOffset>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="100" DisplayName="รายงาน" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True" SimulateClick="False">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1036a9a0-d130-4875-8190-968b3ae1b54c" InformativeScreenshot="7c4eed93f929d17e4a2adf3eb8b094c9" Selector="&lt;wnd aaname='tbarMenu' cls='TToolBar' /&gt;&lt;ctrl name='tbarMenu' role='tool bar' /&gt;&lt;ctrl name='รายงาน' role='menu item' /&gt;" WaitForReady="COMPLETE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,218" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="รายงานเอกสารงานซื้อ" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="720d074d-058e-4ef9-b85d-b8c34706eee3" InformativeScreenshot="769fce7209fb219ac6288ea90b564fde" Selector="&lt;wnd app='bplusback.exe' cls='#32768' idx='*' /&gt;&lt;ctrl name='Context' role='popup menu' /&gt;&lt;ctrl name='รายงานเอกสารงานซื้อ' role='menu item' /&gt;" WaitForReady="COMPLETE">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                      </ui:Target>
+                    </ui:Click.Target>
+                  </ui:Click>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="1" DisplayName="Click 'รายงานเอกสารงานซื้อ'" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="eda3122c-c4d7-453b-9360-56f97d3ac929" Timeout="30" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CvElementArea="7, 8, 21, 21" CvTextArea="31, 9, 114, 17" CvTextArgument="-7u1J7xaniudoyn£" CvType="Icon" DesignTimeRectangle="3, 3, 304, 24" DesignTimeScaleFactor="1" FriendlyName="'รายงานเอกสารงานซื้อ'" FullSelectorArgument="&lt;ctrl name='Context' role='popup menu' /&gt;&lt;ctrl name='รายงานเอกสารงานซื้อ' role='menu item' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Context' role='popup menu' /&gt;&lt;ctrl name='รายงานเอกสารงานซื้อ' role='menu item' automationid='' check:text='รายงานเอกสารงานซื้อ' /&gt;" Guid="6d91f352-8cb8-4f78-92d1-55f87199420f" ImageBase64="" InformativeScreenshot="9cb0ec01a6e521fea51adef01ec96d63.png" ScopeSelectorArgument="&lt;wnd app='bplusback.exe' cls='#32768' idx='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="1" DisplayName="Click 'รายงานรวม -'" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="eda3122c-c4d7-453b-9360-56f97d3ac929" Timeout="30" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="3, 213, 338, 24" DesignTimeScaleFactor="1" FriendlyName="'รายงานรวม -'" FullSelectorArgument="&lt;ctrl name='รายงานเอกสารงานซื้อ' role='popup menu' /&gt;&lt;ctrl name='รายงานรวม - ซื้อสด,รับสินค้าและส่งคืน' role='menu item' /&gt;" FuzzySelectorArgument="&lt;ctrl name='รายงานเอกสารงานซื้อ' role='popup menu' /&gt;&lt;ctrl name='รายงานรวม - ซื้อสด,รับสินค้าและส่งคืน' role='menu item' automationid='' check:text='รายงานรวม - ซื้อสด,รับสินค้าและส่งคืน' /&gt;" Guid="8d8d1554-30d9-48b0-9147-ff13b750409f" ImageBase64="" InformativeScreenshot="b03f2085d877f2ad0bcd796b6bd41b14.png" ScopeSelectorArgument="&lt;wnd app='bplusback.exe' cls='#32768' idx='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="1" DisplayName="Click 'รายงานรายละเอียด เอกสาร…'" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="eda3122c-c4d7-453b-9360-56f97d3ac929" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="3, 126, 452, 24" DesignTimeScaleFactor="1" FriendlyName="'รายงานรายละเอียด เอกสาร…'" FullSelectorArgument="&lt;ctrl name='รายงานรวม - ซื้อสด,รับสินค้าและส่งคืน' role='popup menu' /&gt;&lt;ctrl automationid='336' /&gt;" FuzzySelectorArgument="&lt;ctrl name='รายงานรวม - ซื้อสด,รับสินค้าและส่งคืน' role='popup menu' /&gt;&lt;ctrl automationid='336' role='menu item' check:text='รายงานรายละเอียด เอกสารซื้อและส่งคืน ตามเจ้าหนี้' /&gt;" Guid="75dad826-10a9-4285-9ddc-d4efaef106b3" ImageBase64="" InformativeScreenshot="cf807ceb5e5fdcbfe4b6a771638cba17.png" ScopeSelectorArgument="&lt;wnd app='bplusback.exe' cls='#32768' idx='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="1" DisplayName="Click 'ช่วงวันที่เอกสาร'" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="NClick_17" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="eda3122c-c4d7-453b-9360-56f97d3ac929" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="40, 101, 337, 17" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'ช่วงวันที่เอกสาร'" FullSelectorArgument="&lt;wnd cls='TCheckBox' title='ช่วงวันที่เอกสาร' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TCheckBox' title='ช่วงวันที่เอกสาร' check:fulltext='ช่วงวันที่เอกสาร' /&gt;" Guid="cb0de670-febf-434f-9dda-41e5059f509b" ImageBase64="" InformativeScreenshot="2f6c833f29781a9253515e31d8486425.png" ScopeSelectorArgument="&lt;wnd app='bplusback.exe' cls='TfmRp*' title='เลือกวันที่เอกสารที่ต้องการพิมพ์' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="1" DisplayName="Type Into '01/08/2566'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,227" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="Simulate" ScopeIdentifier="eda3122c-c4d7-453b-9360-56f97d3ac929" Timeout="30" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="161, 141, 101, 21" DesignTimeScaleFactor="1" FriendlyName="'01/08/2566'" FullSelectorArgument="&lt;wnd cls='TBplusEditDate' idx='2' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TBplusEditDate' check:text='01/08/2566' /&gt;" Guid="b026d81f-4ea6-4b8e-b445-6731fb45aa47" InformativeScreenshot="60baf0cc271067c253e75d8ebdc92d42.png" ScopeSelectorArgument="&lt;wnd app='bplusback.exe' cls='TfmRp*' title='เลือกวันที่เอกสารที่ต้องการพิมพ์' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.Text>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">startDate</CSharpValue>
+                </InArgument>
+              </uix:NTypeInto.Text>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="1" DisplayName="Type Into '31/08/2566'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,227" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="Simulate" ScopeIdentifier="eda3122c-c4d7-453b-9360-56f97d3ac929" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="161, 166, 102, 21" DesignTimeScaleFactor="1" FriendlyName="'31/08/2566'" FullSelectorArgument="&lt;wnd cls='TBplusEditDate' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TBplusEditDate' check:text='31/08/2566' /&gt;" Guid="613fb064-5716-4f86-940b-3371149fa7ee" InformativeScreenshot="a873f8957e23c41d9d5ad1b74b0d4d5c.png" ScopeSelectorArgument="&lt;wnd app='bplusback.exe' cls='TfmRp*' title='เลือกวันที่เอกสารที่ต้องการพิมพ์' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.Text>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">endDate</CSharpValue>
+                </InArgument>
+              </uix:NTypeInto.Text>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="1" DisplayName="Click 'บันทึก'" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="eda3122c-c4d7-453b-9360-56f97d3ac929" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="238, 224, 70, 23" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'บันทึก'" FullSelectorArgument="&lt;wnd cls='TBitBtn' title='บันทึก' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TBitBtn' title='บันทึก' check:text='บันทึก' /&gt;" Guid="a1d1d02c-74cc-4230-9764-db78aa32b658" InformativeScreenshot="6b6c1b90a2ea5cfc1b536255e2435a92.png" ScopeSelectorArgument="&lt;wnd app='bplusback.exe' cls='TfmRp*' title='เลือกวันที่เอกสารที่ต้องการพิมพ์' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="1" DisplayName="Click 'เริ่มพิมพ์'" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="NClick_9" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="eda3122c-c4d7-453b-9360-56f97d3ac929" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="297, 203, 75, 25" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'เริ่มพิมพ์'" FullSelectorArgument="&lt;wnd cls='TBitBtn' title='เริ่มพิมพ์' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TBitBtn' title='เริ่มพิมพ์' check:text='เริ่มพิมพ์' /&gt;" Guid="9e697768-fb55-4a29-af86-86cea827d101" InformativeScreenshot="a870a69c86fa747d83e9e4f964fc483f.png" ScopeSelectorArgument="&lt;wnd app='bplusback.exe' cls='TfmRp*' title='พิมพ์รายงาน.รายงานรายละเอียด เอกสารซื้อและส่งคืน ตามเจ้าหนี้' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="1" DisplayName="Click 'บันทึก'" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="NClick_10" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="eda3122c-c4d7-453b-9360-56f97d3ac929" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="541, 371, 75, 25" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'บันทึก'" FullSelectorArgument="&lt;wnd cls='TBitBtn' title='บันทึก' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TBitBtn' title='บันทึก' check:text='บันทึก' /&gt;" Guid="b98bdde1-ed30-46ff-ae33-d5b5f5ce60d5" InformativeScreenshot="741c125a55d3f15ba111de62a44cddb7.png" ScopeSelectorArgument="&lt;wnd app='bplusback.exe' cls='TfmRp*' title='ปรับเปลี่ยนข้อความในรายงาน' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'push button'" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="NClick_11" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="eda3122c-c4d7-453b-9360-56f97d3ac929" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="259, 34, 23, 22" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'push button'" FullSelectorArgument="&lt;wnd cls='ToolbarWindow32' /&gt;&lt;ctrl idx='13' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd cls='ToolbarWindow32' /&gt;&lt;ctrl automationid='' role='push button' /&gt;" Guid="741c91f9-71dd-4203-b46d-c10788ccc765" InformativeScreenshot="b247da5c904f83e3b410273beae6d950.png" ScopeSelectorArgument="&lt;wnd app='bplusback.exe' cls='Afx:*' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="1" DisplayName="Click 'Open'" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="NClick_12" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="eda3122c-c4d7-453b-9360-56f97d3ac929" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="199, 61, 17, 17" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Open'" FullSelectorArgument="&lt;wnd ctrlid='16401' /&gt;&lt;ctrl name='Format:' role='combo box' /&gt;&lt;ctrl automationid='DropDown' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='16401' /&gt;&lt;ctrl name='Format:' role='combo box' /&gt;&lt;ctrl automationid='DropDown' role='push button' check:text='Open' /&gt;" Guid="c702cc41-8420-46f5-a7f3-1cb299ce6c94" InformativeScreenshot="924d6750cfd70ccd2fd7e7f7ae2e3986.png" ScopeSelectorArgument="&lt;wnd app='bplusback.exe' cls='#32770' title='Export' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NSelectItem DelayBefore="1" DisplayName="Select Item 'Acrobat Format (PDF)'" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="Excel 7.0 (XLS)" ScopeIdentifier="eda3122c-c4d7-453b-9360-56f97d3ac929" Timeout="30" Version="V3">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="31">
+                  <x:String>Acrobat Format (PDF)</x:String>
+                  <x:String>Character-separated values</x:String>
+                  <x:String>Comma-separated values (CSV)</x:String>
+                  <x:String>Crystal Reports (RPT)</x:String>
+                  <x:String>Crystal Reports 7.0 (RPT)</x:String>
+                  <x:String>Data Interchange Format (DIF)</x:String>
+                  <x:String>Excel 5.0 (XLS)</x:String>
+                  <x:String>Excel 5.0 (XLS) (Extended)</x:String>
+                  <x:String>Excel 7.0 (XLS)</x:String>
+                  <x:String>Excel 7.0 (XLS) (Extended)</x:String>
+                  <x:String>Excel 8.0 (XLS)</x:String>
+                  <x:String>Excel 8.0 (XLS) (Extended)</x:String>
+                  <x:String xml:space="preserve">HTML 3.2 </x:String>
+                  <x:String>HTML 4.0 (DHTML)</x:String>
+                  <x:String>Lotus 1-2-3 (WK1)</x:String>
+                  <x:String>Lotus 1-2-3 (WK3)</x:String>
+                  <x:String>Lotus 1-2-3 (WKS)</x:String>
+                  <x:String>ODBC - CROR8V36</x:String>
+                  <x:String>ODBC - CRSS</x:String>
+                  <x:String>ODBC - CRXMLV36</x:String>
+                  <x:String>ODBC - Xtreme Sample Database</x:String>
+                  <x:String>Paginated Text</x:String>
+                  <x:String>Record style (columns no spaces)</x:String>
+                  <x:String>Record style (columns with spaces)</x:String>
+                  <x:String>Report Definition</x:String>
+                  <x:String>Rich Text (Exact) Format</x:String>
+                  <x:String>Tab-separated text</x:String>
+                  <x:String>Tab-separated values</x:String>
+                  <x:String>Text</x:String>
+                  <x:String>Word for Windows document</x:String>
+                  <x:String>XML</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="21, 59, 197, 21" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'Acrobat Format (PDF)'" FullSelectorArgument="&lt;wnd ctrlid='16401' /&gt;&lt;ctrl name='Format:' role='combo box' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='16401' /&gt;&lt;ctrl name='Format:' role='combo box' automationid='' /&gt;" Guid="6b5da26f-34b3-4438-9d93-76245faed93b" InformativeScreenshot="e9839089f86255bb194eb8c31c1a2205.png" ScopeSelectorArgument="&lt;wnd app='bplusback.exe' cls='#32770' title='Export' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="199, 61, 17, 17" ElementType="Button" FriendlyName="'Open'" FullSelectorArgument="&lt;wnd ctrlid='16401' /&gt;&lt;ctrl name='Format:' role='combo box' /&gt;&lt;ctrl automationid='DropDown' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='16401' /&gt;&lt;ctrl name='Format:' role='combo box' /&gt;&lt;ctrl automationid='DropDown' role='push button' check:text='Open' /&gt;" ImageBase64="" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="NClick_14" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="eda3122c-c4d7-453b-9360-56f97d3ac929" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="246, 46, 75, 23" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='1' title='OK' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='OK' check:text='unchecked' /&gt;" Guid="981bfc7a-f01d-4c4a-ad0e-96741809f13f" InformativeScreenshot="f0df3c2a5823ee30080862dde0ff7579.png" ScopeSelectorArgument="&lt;wnd app='bplusback.exe' cls='#32770' title='Export' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'IC100201.xls'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,227" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="Simulate" ScopeIdentifier="eda3122c-c4d7-453b-9360-56f97d3ac929" Text="d:\1234" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="136, 716, 471, 17" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'IC100201.xls'" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" Guid="f991e223-a2ae-4e10-ba48-ff56433b1c66" InformativeScreenshot="951148f525afd40c5f4e91e3cca97181.png" ScopeSelectorArgument="&lt;wnd app='bplusback.exe' cls='#32770' title='Choose Export File' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="NClick_15" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="eda3122c-c4d7-453b-9360-56f97d3ac929" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="427, 816, 88, 26" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' check:text='unchecked' /&gt;" Guid="1b1b3b27-84ab-4fb5-8807-d5383f8ed705" InformativeScreenshot="e5a7d3acf646ad3a7beba8a42c5c0ed0.png" ScopeSelectorArgument="&lt;wnd app='bplusback.exe' cls='#32770' title='Choose Export File' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Close'" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="NClick_16" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="eda3122c-c4d7-453b-9360-56f97d3ac929" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="1880, 8, 48, 22" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Close'" FullSelectorArgument="&lt;ctrl name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Close' role='push button' automationid='' check:text='Close' /&gt;" Guid="85af551c-9522-4ef7-a9de-1726b1de2272" InformativeScreenshot="52d80cddf46cae75599ff54d65e5682e.png" ScopeSelectorArgument="&lt;wnd app='bplusback.exe' cls='Afx:*' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" FilePath="C:\\Program Files (x86)\\EBP\\BplusBack v2.9\\bplusback.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGsSURBVFhH3ZELbsNACERzdB8tN0sZdoawGP9aN1L70Agvy8/247/xSvooPhTomfp1YjCw07APLNAPNvPTe4HblzgeLLt5gXYwnvIb5zvFqG8TjYGdwurgCcTTvekyU2NvRjsaLLkxjzqFJws7hZ0dLJaFlawxHcLS64OziWYBaBcv9CKzs4OFBsJLYexj2sWTgIpWIEbJBAYqnu/dcH5rF2/mRWZC5xEb2n1jMxHxswuEGhvDB2psye5Xz6RZAGphyQBnmEAjvbkk6xbr8rznxgIsTzBZoJEPQpw2PZNpYDX2pCY8mFGsvokFhyeK1zyZiDj7miY8CV7yAsRxRqPqSR1YTTQLQIEHRuLiUkwmtNhNCrw5vBRfYFwMb0RsAyyffUeaE0Tj1Rcoej6fm0Jd9lXqz14TfgkvTV+A1HMGjbPvwN3mAlBN6kC8vtnCmHwVUN/NBQC81C0Rdyd1aQGoJgLdQfotdYCeuxgEcl/2m/AkeEmJoBTGAnvS8NMLQDUR6A76U18A6hZgj5YpEQKIS/oCaixpWB6aBY6GgxiUpeLU4Ce6zC1Ntnk8vgC1lTakhuJ6xAAAAABJRU5ErkJggg==" InformativeScreenshot="b1b53112ce9f75fdd7069022c0f3005d.png" Selector="&lt;wnd app='bplusback.exe' cls='TfmTr*' title='งานประจำวันซื้อขาย' /&gt;" Title="งานประจำวันซื้อขาย" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
