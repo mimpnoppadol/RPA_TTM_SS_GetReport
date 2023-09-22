@@ -207,7 +207,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'AR050001'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="73580e34-88d0-40ee-b5e8-c2a111109297" Text="&quot;D:\JOB_NICK\EXCEL\AR50001&quot;" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'AR050001'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="73580e34-88d0-40ee-b5e8-c2a111109297" Text="D:\JOB_NICK\EXCEL\AR50001.xlsx" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="204, 553, 707, 26" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'AR050001'" FullSelectorArgument="&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" Guid="abac28b2-9801-4a44-b650-8e46d0e14c83" InformativeScreenshot="c152bdde27b951318924d5fea9f2cfff.png" ScopeSelectorArgument="&lt;wnd app='bplusback.exe' cls='#32770' title='Choose Export File' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
               </uix:NTypeInto.Target>
