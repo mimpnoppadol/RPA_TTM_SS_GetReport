@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="GetStockMove" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1153.3333333333333,6928" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="GetStockMove" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1153.3333333333333,7440" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -38,6 +38,7 @@
       <x:String>System.ComponentModel</x:String>
       <x:String>UiPath.Platform.Triggers</x:String>
       <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>System.IO</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -97,21 +98,59 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetStockMove" sap:VirtualizedContainerService.HintSize="644.6666666666666,6863.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetStockMove" sap:VirtualizedContainerService.HintSize="644.6666666666666,7375.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="strPath">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">D:\Mimp\GitHub\RPA_TTM_SS_GetReport\Report\</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Name="strStartDate" />
+      <Variable x:TypeArguments="x:String" Name="strEndDate" />
+      <Variable x:TypeArguments="x:Int32" Name="iMonth" />
+      <Variable x:TypeArguments="x:Int32" Name="iYear" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <Assign sap:VirtualizedContainerService.HintSize="582.6666666666666,84.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">strStartDate</CSharpReference>
+        </OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_18">DateTime.Now.AddMonths(-1).ToString("01MM")+(DateTime.Now.Year+543)</CSharpValue>
+        </InArgument>
+      </Assign.Value>
+    </Assign>
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="582.6666666666666,91.33333333333333" sap2010:WorkflowViewState.IdRef="WriteLine_1">
+      <InArgument x:TypeArguments="x:String">
+        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">strStartDate</CSharpValue>
+      </InArgument>
+    </WriteLine>
+    <Assign sap:VirtualizedContainerService.HintSize="582.6666666666666,84.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_4">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">strEndDate</CSharpReference>
+        </OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">new DateTime(DateTime.Now.Year,DateTime.Now.Month,1).AddDays(-1).ToString("ddMM")+(DateTime.Now.Year+543)</CSharpValue>
+        </InArgument>
+      </Assign.Value>
+    </Assign>
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="582.6666666666666,91.33333333333333" sap2010:WorkflowViewState.IdRef="WriteLine_2">
+      <InArgument x:TypeArguments="x:String">
+        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">strEndDate</CSharpValue>
+      </InArgument>
+    </WriteLine>
     <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: งานประจำวันซื้อขาย" sap:VirtualizedContainerService.HintSize="582.6666666666666,6752.666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" IsCVEnabled="False" ScopeGuid="1e4dd921-479c-4091-9dd9-3f9133b7beb6" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
@@ -184,15 +223,25 @@
               </ui:CommentOut.Body>
             </ui:CommentOut>
             <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="486.6666666666667,182.66666666666666" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_3" Shortcuts="[d(hk)][k(Tab)][u(hk)][d(hk)][k(tab)][u(hk)]" Version="V3" />
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '22/09/2566'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="486.6666666666667,220" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="1e4dd921-479c-4091-9dd9-3f9133b7beb6" Text="01082566" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '22/09/2566'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="486.6666666666667,220" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="1e4dd921-479c-4091-9dd9-3f9133b7beb6" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="241, 211, 152, 32" DesignTimeScaleFactor="1.5" FriendlyName="'22/09/2566'" FullSelectorArgument="&lt;wnd cls='TBplusEditDate' idx='2' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TBplusEditDate' check:text='22/09/2566' /&gt;" Guid="37a49082-c8e9-4c32-b0e2-da141f8a200e" InformativeScreenshot="2fe29c088b4c5f053fe5711e1fad23aa.png" ScopeSelectorArgument="&lt;wnd app='bplusback.exe' cls='TfmRp*' title='เลือกวันที่เอกสารที่ต้องการพิมพ์' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
               </uix:NTypeInto.Target>
+              <uix:NTypeInto.Text>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">strStartDate</CSharpValue>
+                </InArgument>
+              </uix:NTypeInto.Text>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '22/09/2566'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="486.6666666666667,220" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="1e4dd921-479c-4091-9dd9-3f9133b7beb6" Text="31082566" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '22/09/2566'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="486.6666666666667,220" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="1e4dd921-479c-4091-9dd9-3f9133b7beb6" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="241, 249, 153, 32" DesignTimeScaleFactor="1.5" FriendlyName="'22/09/2566'" FullSelectorArgument="&lt;wnd cls='TBplusEditDate' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TBplusEditDate' check:text='22/09/2566' /&gt;" Guid="6a39cd9e-de27-4670-97e0-4d2f418e4337" InformativeScreenshot="64ef71c302411ee851629722dd3a2052.png" ScopeSelectorArgument="&lt;wnd app='bplusback.exe' cls='TfmRp*' title='เลือกวันที่เอกสารที่ต้องการพิมพ์' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
               </uix:NTypeInto.Target>
+              <uix:NTypeInto.Text>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">strEndDate</CSharpValue>
+                </InArgument>
+              </uix:NTypeInto.Text>
             </uix:NTypeInto>
             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'บันทึก'" sap:VirtualizedContainerService.HintSize="486.6666666666667,158.66666666666666" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1e4dd921-479c-4091-9dd9-3f9133b7beb6" Version="V3">
               <uix:NClick.Target>
