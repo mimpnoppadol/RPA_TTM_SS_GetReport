@@ -1,0 +1,232 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="GetCustomer" this:GetCustomer.strPath="C:\Users\G4ME\Documents\RPA\RPA_TTM_SS_GetReport\RPA_TTM_SS_GetReport_FileReport\ReportCustomer.xls" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="strPath" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>992,3203.3333333333335</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>RPA_TTM_SS_GetReport.Core</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="546,3138.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_11">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: งานประจำวันซื้อขาย" sap:VirtualizedContainerService.HintSize="484,3028" sap2010:WorkflowViewState.IdRef="NApplicationCard_12" ScopeGuid="cb854c5c-6a28-4f6a-b4c2-790dc2a08fc1" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,2730.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_12">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'การตั้งค่า'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_66" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cb854c5c-6a28-4f6a-b4c2-790dc2a08fc1" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="21, 219, 115, 39" DesignTimeScaleFactor="1.5" FriendlyName="'การตั้งค่า'" FullSelectorArgument="&lt;wnd cls='TPanel' title='   การตั้งค่า' /&gt;&lt;ctrl name='   การตั้งค่า' role='client' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TPanel' title='   การตั้งค่า' /&gt;&lt;ctrl name='   การตั้งค่า' role='client' automationid='' check:text='การตั้งค่า' /&gt;" Guid="9d381de0-a535-4fec-8abe-555e6769c5a0" InformativeScreenshot="bceb242680628639ac0e48a8fb7571b9.png" ScopeSelectorArgument="&lt;wnd app='bplusback.exe' cls='TfmTr*' title='งานประจำวันซื้อขาย' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'ฝ่ายการเงิน'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_67" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cb854c5c-6a28-4f6a-b4c2-790dc2a08fc1" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="24, 526, 88, 67" DesignTimeScaleFactor="1.5" ElementType="ListItem" FriendlyName="'ฝ่ายการเงิน'" FullSelectorArgument="&lt;wnd cls='TBxListView' /&gt;&lt;ctrl name='ฝ่ายการเงิน' role='list item' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TBxListView' /&gt;&lt;ctrl name='ฝ่ายการเงิน' role='list item' automationid='' check:text='ฝ่ายการเงิน' /&gt;" Guid="15cc08fd-0db9-40d1-b2bb-35a52b271e96" InformativeScreenshot="3ca44d2ad6f59aaa87e7f584880c6d60.png" ScopeSelectorArgument="&lt;wnd app='bplusback.exe' cls='TfmTr*' title='งานประจำวันซื้อขาย' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'รายงาน'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_68" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cb854c5c-6a28-4f6a-b4c2-790dc2a08fc1" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="247, 56, 79, 31" DesignTimeScaleFactor="1.5" FriendlyName="'รายงาน'" FullSelectorArgument="&lt;wnd aaname='tbarMenu' cls='TToolBar' /&gt;&lt;ctrl name='tbarMenu' role='tool bar' /&gt;&lt;ctrl name='รายงาน' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='tbarMenu' cls='TToolBar' /&gt;&lt;ctrl name='tbarMenu' role='tool bar' /&gt;&lt;ctrl name='รายงาน' role='menu item' automationid='' check:text='รายงาน' /&gt;" Guid="0fbdce8d-f47f-4989-8905-becef6a43512" InformativeScreenshot="90125f7f4f074f6b45e99f22ea8a1cc8.png" ScopeSelectorArgument="&lt;wnd app='bplusback.exe' cls='TfmFn*' title='ฝ่ายการเงิน' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'รายงานตั้งค่า- ลูกหนี้'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_69" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cb854c5c-6a28-4f6a-b4c2-790dc2a08fc1" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="5, 5, 331, 33" DesignTimeScaleFactor="1.5" FriendlyName="'รายงานตั้งค่า- ลูกหนี้'" FullSelectorArgument="&lt;ctrl name='Context' role='popup menu' /&gt;&lt;ctrl name='รายงานตั้งค่า- ลูกหนี้' role='menu item' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Context' role='popup menu' /&gt;&lt;ctrl name='รายงานตั้งค่า- ลูกหนี้' role='menu item' automationid='' check:text='รายงานตั้งค่า- ลูกหนี้' /&gt;" Guid="d4586865-9508-4d7a-8d2b-03b17e319c6a" InformativeScreenshot="ca30730bdea47c34e0be6f8a70fd7394.png" ScopeSelectorArgument="&lt;wnd app='bplusback.exe' cls='#32768' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="1" DisplayName="Click 'รายงานรายชื่อลูกค้าตามป…'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_70" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cb854c5c-6a28-4f6a-b4c2-790dc2a08fc1" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="5, 52, 501, 33" DesignTimeScaleFactor="1.5" FriendlyName="'รายงานรายชื่อลูกค้าตามป…'" FullSelectorArgument="&lt;ctrl name='รายงานตั้งค่า- ลูกหนี้' role='popup menu' /&gt;&lt;ctrl automationid='1061' /&gt;" FuzzySelectorArgument="&lt;ctrl name='รายงานตั้งค่า- ลูกหนี้' role='popup menu' /&gt;&lt;ctrl automationid='1061' role='menu item' check:text='รายงานรายชื่อลูกค้าตามประเภท (Legal)' /&gt;" Guid="41455139-d7de-45a9-9b0b-efeb0f872a5b" InformativeScreenshot="e96eeca8165019476908d631e39ec895.png" ScopeSelectorArgument="&lt;wnd app='bplusback.exe' cls='#32768' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'เริ่มพิมพ์'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_71" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cb854c5c-6a28-4f6a-b4c2-790dc2a08fc1" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="445, 304, 113, 38" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'เริ่มพิมพ์'" FullSelectorArgument="&lt;wnd cls='TBitBtn' title='เริ่มพิมพ์' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TBitBtn' title='เริ่มพิมพ์' check:text='เริ่มพิมพ์' /&gt;" Guid="90e20df7-8002-4936-9aeb-a78e11cbeecb" InformativeScreenshot="574370f2cfe588b043f21da9ae743b51.png" ScopeSelectorArgument="&lt;wnd app='bplusback.exe' cls='TfmRp*' title='พิมพ์รายงาน.รายงานรายชื่อลูกค้าตามประเภท (Legal)' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'push button'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_72" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cb854c5c-6a28-4f6a-b4c2-790dc2a08fc1" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="393, 55, 34, 32" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'push button'" FullSelectorArgument="&lt;wnd cls='ToolbarWindow32' /&gt;&lt;ctrl idx='13' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd cls='ToolbarWindow32' /&gt;&lt;ctrl automationid='' role='push button' /&gt;" Guid="377b71ff-b9c6-4c59-96ad-8e6ac8b6254d" InformativeScreenshot="7217c53ac532e4d450ba99a78f5099ac.png" ScopeSelectorArgument="&lt;wnd app='bplusback.exe' cls='Afx:*' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="1" DisplayName="Click 'Open'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_73" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cb854c5c-6a28-4f6a-b4c2-790dc2a08fc1" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="298, 92, 26, 25" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Open'" FullSelectorArgument="&lt;wnd ctrlid='16401' /&gt;&lt;ctrl name='Format:' role='combo box' /&gt;&lt;ctrl automationid='DropDown' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='16401' /&gt;&lt;ctrl name='Format:' role='combo box' /&gt;&lt;ctrl automationid='DropDown' role='push button' check:text='Open' /&gt;" Guid="f7cf52c2-5e97-47de-86d1-ae2804e274a0" InformativeScreenshot="4432c07079b9b979f51308b0d0997709.png" ScopeSelectorArgument="&lt;wnd app='bplusback.exe' cls='#32770' title='Export' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NSelectItem DisplayName="Select Item 'Excel 7.0 (XLS)'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="Excel 7.0 (XLS)" ScopeIdentifier="cb854c5c-6a28-4f6a-b4c2-790dc2a08fc1" Version="V3">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="27">
+                  <x:String>Acrobat Format (PDF)</x:String>
+                  <x:String>Character-separated values</x:String>
+                  <x:String>Comma-separated values (CSV)</x:String>
+                  <x:String>Crystal Reports (RPT)</x:String>
+                  <x:String>Crystal Reports 7.0 (RPT)</x:String>
+                  <x:String>Data Interchange Format (DIF)</x:String>
+                  <x:String>Excel 5.0 (XLS)</x:String>
+                  <x:String>Excel 5.0 (XLS) (Extended)</x:String>
+                  <x:String>Excel 7.0 (XLS)</x:String>
+                  <x:String>Excel 7.0 (XLS) (Extended)</x:String>
+                  <x:String>Excel 8.0 (XLS)</x:String>
+                  <x:String>Excel 8.0 (XLS) (Extended)</x:String>
+                  <x:String xml:space="preserve">HTML 3.2 </x:String>
+                  <x:String>HTML 4.0 (DHTML)</x:String>
+                  <x:String>Lotus 1-2-3 (WK1)</x:String>
+                  <x:String>Lotus 1-2-3 (WK3)</x:String>
+                  <x:String>Lotus 1-2-3 (WKS)</x:String>
+                  <x:String>Paginated Text</x:String>
+                  <x:String>Record style (columns no spaces)</x:String>
+                  <x:String>Record style (columns with spaces)</x:String>
+                  <x:String>Report Definition</x:String>
+                  <x:String>Rich Text Format</x:String>
+                  <x:String>Tab-separated text</x:String>
+                  <x:String>Tab-separated values</x:String>
+                  <x:String>Text</x:String>
+                  <x:String>Word for Windows document</x:String>
+                  <x:String>XML</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="33, 89, 294, 31" DesignTimeScaleFactor="1.5" ElementType="DropDown" FriendlyName="'Excel 7.0 (XLS)'" FullSelectorArgument="&lt;wnd ctrlid='16401' /&gt;&lt;ctrl name='Format:' role='combo box' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='16401' /&gt;&lt;ctrl name='Format:' role='combo box' automationid='' /&gt;" Guid="e1f55753-cae5-4025-bd0d-47691471781a" ImageBase64="" InformativeScreenshot="76c73ef002bfbb465a2acc7b1f9606fc.png" ScopeSelectorArgument="&lt;wnd app='bplusback.exe' cls='#32770' title='Export' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_75" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cb854c5c-6a28-4f6a-b4c2-790dc2a08fc1" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="369, 69, 113, 35" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='1' title='OK' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='OK' check:text='unchecked' /&gt;" Guid="15f4a351-672f-41aa-a473-c7f541c81370" InformativeScreenshot="cef6c0ba55fad8e8f36aa2cc4b1edf00.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='bplusback.exe' cls='#32770' title='Export' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'AR050001'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="cb854c5c-6a28-4f6a-b4c2-790dc2a08fc1" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="204, 633, 1026, 26" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'AR050001'" FullSelectorArgument="&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" Guid="f6896ebb-55dc-44e8-bf5d-2dd8167c8949" InformativeScreenshot="c682c78a71e663321b3957c86362ec4d.png" ScopeSelectorArgument="&lt;wnd app='bplusback.exe' cls='#32770' title='Choose Export File' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.Text>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">strPath</CSharpValue>
+                </InArgument>
+              </uix:NTypeInto.Text>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_76" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cb854c5c-6a28-4f6a-b4c2-790dc2a08fc1" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="960, 730, 132, 39" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' check:text='unchecked' /&gt;" Guid="543f5070-bc0d-48d9-8d0b-7c5cf40a7a9d" InformativeScreenshot="cffeab30fb0ad4e64d094181742af1ae.png" ScopeSelectorArgument="&lt;wnd app='bplusback.exe' cls='#32770' title='Choose Export File' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Close" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_82" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cb854c5c-6a28-4f6a-b4c2-790dc2a08fc1" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CvElementArea="2499, 9, 73, 37" CvType="CloseButton" DesignTimeRectangle="2494, 16, 72, 34" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Close'" FullSelectorArgument="&lt;ctrl name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Close' role='push button' automationid='' check:text='Close' /&gt;" Guid="08b05bc4-edf0-43b0-8ecd-9edda19aae06" InformativeScreenshot="71f7a0113a43ddd015d761c5fab7a1d3.png" ScopeSelectorArgument="&lt;wnd app='bplusback.exe' cls='Afx:*' idx='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" FilePath="C:\\Program Files (x86)\\EBP\\BplusBack v2.9\\bplusback.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAGsSURBVFhH3ZELbsNACERzdB8tN0sZdoawGP9aN1L70Agvy8/247/xSvooPhTomfp1YjCw07APLNAPNvPTe4HblzgeLLt5gXYwnvIb5zvFqG8TjYGdwurgCcTTvekyU2NvRjsaLLkxjzqFJws7hZ0dLJaFlawxHcLS64OziWYBaBcv9CKzs4OFBsJLYexj2sWTgIpWIEbJBAYqnu/dcH5rF2/mRWZC5xEb2n1jMxHxswuEGhvDB2psye5Xz6RZAGphyQBnmEAjvbkk6xbr8rznxgIsTzBZoJEPQpw2PZNpYDX2pCY8mFGsvokFhyeK1zyZiDj7miY8CV7yAsRxRqPqSR1YTTQLQIEHRuLiUkwmtNhNCrw5vBRfYFwMb0RsAyyffUeaE0Tj1Rcoej6fm0Jd9lXqz14TfgkvTV+A1HMGjbPvwN3mAlBN6kC8vtnCmHwVUN/NBQC81C0Rdyd1aQGoJgLdQfotdYCeuxgEcl/2m/AkeEmJoBTGAnvS8NMLQDUR6A76U18A6hZgj5YpEQKIS/oCaixpWB6aBY6GgxiUpeLU4Ce6zC1Ntnk8vgC1lTakhuJ6xAAAAABJRU5ErkJggg==" InformativeScreenshot="30d268ec618c871223ee24725ed754e7.png" Selector="&lt;wnd app='bplusback.exe' cls='TfmTr*' title='งานประจำวันซื้อขาย' /&gt;" Title="งานประจำวันซื้อขาย" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
