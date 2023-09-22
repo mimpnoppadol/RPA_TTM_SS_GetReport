@@ -12,7 +12,6 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "strPath&Sequence_1",
         "dtData&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
@@ -37,6 +36,31 @@
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
         "dr"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "GetPurchase.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtTest&Sequence_1",
+        "startDate&Sequence_2",
+        "endDate&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "~Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtData&Sequence_1",
+        "strPath&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "ConfigPath"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
