@@ -17,11 +17,13 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "GetPurchase.xaml",
+      "Path": "GetStockMove.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "endDate&Sequence_2",
-        "startDate&Sequence_2"
+        "iYear&Sequence_1",
+        "iMonth&Sequence_1",
+        "strEndDate&Sequence_1",
+        "strStartDate&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
